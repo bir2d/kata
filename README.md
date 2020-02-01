@@ -1,9 +1,9 @@
 # Comandos de ejecucion
-instalar anguar cli:
-npm install -g @angular/cli
-ejecutar:
-ng serve
-test: 
+instalar anguar cli: <br />
+npm install -g @angular/cli <br />
+ejecutar: <br />
+ng serve <br />
+test:  <br />
 ng test
 # Criterios de evaluación
 ![](docs/file1.jpeg?raw=true)
