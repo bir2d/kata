@@ -1,0 +1,54 @@
+<h3>
+  Kata de programación.
+  <p>
+    Un brujo ha entrado a una tienda y ha comprado un cierto número de pociones para ir a matar
+    a una estrige, entre los tipos de poción compradas estan las siguentes:
+  </p>
+  <ul>
+    <li>Poción roja.</li>
+    <li>Poción azul.</li>
+    <li>Poción verde.</li>
+    <li>Poción amarilla.</li>
+    <li>Poción gris.</li>
+  </ul>
+  <p>
+    Al mezclar diferentes tipos de pociones puedes lograr hacer más daño a tu objetivo, las
+    diferentes mezclas y porcentaje de daño que puedes hacer son las siguientes:
+  </p>
+  <ul>
+
+    <li>Una poción causa un 3% de daño.</li>
+    <li>Dos pociones distintas causan un 5% de daño.</li>
+    <li>Tres pociónes distintas causan un 10% de daño.</li>
+    <li>Cuatro pociónes distintas causan un 20% de daño.</li>
+    <li>Cinco pociónes distintas causan un 25% de daño.</li>
+  </ul>
+  <hr>
+  <h3>
+    Pociones del Brujo
+  </h3>
+  <label for="">Rojas</label>
+  <input type="text" [(ngModel)]="pociones.rojas"> <br>
+  <label for="">Azules</label>
+  <input type="text" [(ngModel)]="pociones.azules"> <br>
+  <label for="">Verdes</label>
+  <input type="text" [(ngModel)]="pociones.verdes"> <br>
+  <label for="">Amarillas</label>
+  <input type="text" [(ngModel)]="pociones.amarillas"> <br>
+  <label for="">Grises</label>
+  <input type="text" [(ngModel)]="pociones.gris"> <br>
+  <button (click)="buscarRespuesta()">Atacar!!!</button>
+  <ng-container *ngIf="respuesta.dano>0">
+    <p>Ataques:</p>
+    <ul>
+      <li *ngFor="let ataque of respuesta.ataques; let i=index" >
+          Ataque {{i+1}}: usa {{ataque.total()}} pociones distintas causa un {{diccionarioDano[ataque.total()]}}% de daño.
+      </li>
+      <li>
+          Total: el brujo ha causado un {{respuesta.dano}}% de daño.
+      </li>
+    </ul>
+
+  </ng-container>
+  
+</h3>
